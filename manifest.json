@@ -1,14 +1,18 @@
 {
     "name": "CBid Free Fallin",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "description": "Track free fall prices on Cbid",
     "content_scripts": [
       {
         "matches": ["https://*.cigarbid.com/shop/free-fall-auctions*"],
         "js": ["find-price.js"]
+      },
+      {
+        "matches": ["https://*.cigarbid.com/a/*"],
+        "js": ["find-price-sku.js"]
       }
     ],
-    "permissions": ["tabs"],
+    "permissions": [],
     "icons": {
       "16": "images/cigar16.png",
       "32": "images/cigar32.png",
